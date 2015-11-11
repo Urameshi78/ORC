@@ -1,0 +1,21 @@
+Salut Valentin,
+
+Je t'écris ici parce que je suis actuellement en Chine et comme tu le sais Facebook c'est bloqué.
+Je voulais donc t'expliquer ce que j'ai fait.
+J'ai modifié l'architecture de ton code pour simplifier les choses et pour les rendre plus lisibles mais globalement c'est pas loin de ce que tu avais fait.
+J'ai implémenté ce dont on a parlé avant que je décolle. J'ai modifié la nomenclature des templates pour recupérer le caractère correspondant au template plus facilement. Mais ils sont de la forme {valeur ascii}.bmp.
+Mais une fois sérialisé dans le .txt je fais un -32 sur cette valeur pour qu'on passe de 0 à 94 (Plus facile après pour les matrices _classifications).
+Et aussi il sérialise tout les samples d'un set dans le même fichier, au lieu de sérialiser sample par sample.
+
+Pour lancer le programme fait un make run.
+
+Il te reste a faire l'étape 3, il y a pas grand chose qui change par rapport à l'exemple sauf que tu dois train jusqu'à ce que tu ais une niveau de satifaction suffisant. Lui il train une fois et s'en fou.
+Pas très compliqué en soi.
+
+Je compte sur toi.
+
+Et j'ai fais une erreur, dans sets/training_set/1 le template pour A et a sont les mêmes il faut que tu reupload le template pour a.
+
+Pour Medhi.
+
+Dans le dossier training_set, pour chaque sample  (un sample égal 94 fichier image, pour chaque image un caracère imprimable ascii nommé {valeur ascii du caractère}.bmp) il faudrait au moins 10 training_set et 1 test_sets
