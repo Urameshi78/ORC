@@ -101,8 +101,7 @@ char OCR::predictCharacter(std::string const &filepath) {
       maxIndex=index;
     }
   }
-
-  return ((char) maxIndex);
+  return ((char) maxIndex + 32);
 }
 
 void OCR::setNeuralNetworkSerializedFile(const std::string& file) {
