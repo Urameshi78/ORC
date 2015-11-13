@@ -14,10 +14,11 @@ public :
   ImageProcessor();
   ~ImageProcessor();
 
-  ImageProcessor(ImageProcessor const &);
-  ImageProcessor &operator=(ImageProcessor const &);
+  ImageProcessor(ImageProcessor const &) = delete;
+  ImageProcessor &operator=(ImageProcessor const &) = delete;
 
   int		 processSet(std::string const &baseDir, std::string const &outputFile);
+  cv::Mat processImage(std::string const &filepath);
   int    processSample(std::string const &baseDir, SetWriter & writer);
 private :
 

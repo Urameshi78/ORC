@@ -1,7 +1,7 @@
 #ifndef SET_READER_HPP
 # define SET_READER_HPP
 
-#include <fstream> 
+#include <fstream>
 #include "opencv2/opencv.hpp"
 #include "opencv2/ml/ml.hpp"
 
@@ -11,13 +11,13 @@
 # define CLASSES 95
 
 
-class setReader
+class SetReader
 {
-public :
-  setReader();
-  ~setReader();
+private:
+  SetReader();
 
-  void readDataSet(const std::string &DataSetFile, cv::Mat &data, cv::Mat &classes, int max_samples);
+public:
+  static void readDataSet(const std::string &DataSetFile, cv::Mat &data, cv::Mat &classes, int max_samples);
 };
 
 #endif /* ! SET_READER_HPP */

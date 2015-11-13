@@ -15,8 +15,9 @@ public :
   SetWriter &operator=(SetWriter const &) = delete;
 
   void	addMatToSet(cv::Mat const &, int value);
+  static cv::Mat  convertMat(cv::Mat const &initialMat);
   void  close();
-  
+
 private :
   std::fstream	fileOutput;
 };

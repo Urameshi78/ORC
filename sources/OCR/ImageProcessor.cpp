@@ -18,8 +18,7 @@ int     ImageProcessor::processSet(std::string const &baseDir, std::string const
       struct dirent * ent;
       while ((ent = readdir(rep)) != NULL){
         if (strcmp(ent->d_name, ".") != 0 && strcmp(ent->d_name, "..") != 0) {
-	  //          std::cout << baseDir + "/" + ent->d_name << std::endl;
-          int nb = processSample(baseDir + "/" + ent->d_name, writer);
+           int nb = processSample(baseDir + "/" + ent->d_name, writer);
           if (nb == 0)
             return 0;
           count += nb;
@@ -44,6 +43,14 @@ int     ImageProcessor::processSample(std::string const &baseDir, SetWriter & wr
     writer.addMatToSet(img, value - 32);
   }
   return count;
+}
+
+cv::Mat ImageProcessor::processImage(std::string const &filePath){
+  cv::Mat img = cv::imread(filePath.c_str(), 0);
+  applyFilters(img);
+  cropImgAndScaleDown(img);
+
+  return SetWriter::convertMat(img);
 }
 
 void		ImageProcessor::applyFilters(cv::Mat& img){
