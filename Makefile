@@ -27,4 +27,4 @@ fclean: clean
 re: fclean all
 
 run : $(PROJECT)
-	./$(PROJECT) sets/training_sets training_set.text
+	./$(PROJECT) sets/training_sets training_set.text training_set.text

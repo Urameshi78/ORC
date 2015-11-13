@@ -2,6 +2,7 @@
 # define OCR_HPP
 
 #include "OCR/ImageProcessor.hpp"
+#include "OCR/MatriceOCR.hpp"
 
 class OCR{
 
@@ -17,6 +18,7 @@ public:
   void  predict(std::string const &filepath);
 
 private:
+  float	pcTrain(CvANN_MLP&, MatriceOCR&) const;
   ImageProcessor processor;
 };
 

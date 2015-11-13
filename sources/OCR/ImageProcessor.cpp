@@ -18,7 +18,7 @@ int     ImageProcessor::processSet(std::string const &baseDir, std::string const
       struct dirent * ent;
       while ((ent = readdir(rep)) != NULL){
         if (strcmp(ent->d_name, ".") != 0 && strcmp(ent->d_name, "..") != 0) {
-          std::cout << baseDir + "/" + ent->d_name << std::endl;
+	  //          std::cout << baseDir + "/" + ent->d_name << std::endl;
           int nb = processSample(baseDir + "/" + ent->d_name, writer);
           if (nb == 0)
             return 0;
@@ -35,7 +35,7 @@ int     ImageProcessor::processSample(std::string const &baseDir, SetWriter & wr
   int count = 0;
   for (int value = 32; value <= 126; ++value){
     ++count;
-    std::cout << static_cast<char>(value) << std::endl;
+    //    std::cout << static_cast<char>(value) << std::endl;
     cv::Mat img = cv::imread(baseDir + "/" + std::to_string(value) + ".bmp", 0);
     if (img.empty())
       return 0;
