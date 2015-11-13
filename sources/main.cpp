@@ -10,7 +10,7 @@ int			main(int argc, char **argv){
       std::cout << "Output file is " << argv[2] << std::endl;
     }
 
-    ocr.trainNeuralNetwork(argv[2], argv[3], 80);
+    ocr.trainNeuralNetwork(argv[2], argv[3], 88);
     return (0);
   }
   std::cerr << "You must select a set folder" << std::endl;

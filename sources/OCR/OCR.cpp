@@ -47,7 +47,6 @@ float OCR::pcTrain(CvANN_MLP& nnetwork, MatriceOCR& matriceOcr) const {
 	  {
 	    if(test_set_classifications.at<float>(tsample, class_index)==1.0f)
 	      {
- 
 		classification_matrix[class_index][maxIndex]++;
 		break;
 	      }
@@ -87,8 +86,18 @@ void OCR::trainNeuralNetwork(std::string const &pathTrainingSet, std::string con
     retPerformance = this->pcTrain(nnetwork, matriceOcr);
     std::cout << retPerformance << "%" <<std::endl;
   }
+  this->setFileTrain("param.xml");
 }
 
 void OCR::predict(std::string const &filepath) {
+  
+  
+}
 
+void OCR::setFileTrain(const std::string& file) {
+  this->fileTrain = file;
+}
+
+std::string& OCR::getFileTrain() {
+  return (this->fileTrain);
 }
