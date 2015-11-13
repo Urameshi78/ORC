@@ -101,7 +101,7 @@ char OCR::predictCharacter(std::string const &filepath) {
       maxIndex=index;
     }
   }
-  return ((char) maxIndex + 32);
+  return ((char) maxIndex + 32); // plus 32 POUR MONTER DANS LA TABLE ASCCI ET DISPLAY NOTRE CARAC
 }
 
 void OCR::setNeuralNetworkSerializedFile(const std::string& file) {
