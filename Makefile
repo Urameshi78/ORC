@@ -22,9 +22,9 @@ clean:
 	rm -fr $(OBJS)
 
 fclean: clean
-	rm -fr $(PROJECT)
+	rm -rf $(PROJECT)
 
 re: fclean all
 
 run : $(PROJECT)
-	./$(PROJECT) sets/training_sets training_set.text
+	./$(PROJECT) sets/training_sets training_set.text sets/training_sets/1/42.bmp
