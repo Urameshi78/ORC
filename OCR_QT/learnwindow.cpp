@@ -24,10 +24,10 @@ void LearnWindow::onClickFunction()
     // We are doing only once because for now we are missing samples
 
 
-    int count = ocr.createSet(text.toStdString(), "/home/pixies/Desktop/OCR/depot/ORC/qt/OutputFile.txt");
+    int count = ocr.createSet(text.toStdString(), "/home/pixies/Desktop/OCR/depot/ORC/createdFile/OutputFile.txt");
     std::cout << "Set created with " << count << " entries" << std::endl;
     std::cout << "Training Neural Network" << std::endl;
-    ocr.trainNeuralNetwork("/home/pixies/Desktop/OCR/depot/ORC/qt/OutputFile.txt", "/home/pixies/Desktop/OCR/depot/ORC/qt/OutputFile.txt", 88);
+    ocr.trainNeuralNetwork("/home/pixies/Desktop/OCR/depot/ORC/createdFile/OutputFile.txt", "/home/pixies/Desktop/OCR/depot/ORC/createdFile/OutputFile.txt", 80);
     std::cout   << "Verification de " << std::endl;
     std::cout << "Prediction : " << ocr.predictCharacter(path.c_str()) << std::endl;
   }

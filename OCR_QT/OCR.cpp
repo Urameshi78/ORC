@@ -1,7 +1,7 @@
 #include "OCR.hpp"
 
 OCR::OCR()
-:processor(), nnetworkFile("/home/pixies/Desktop/OCR/depot/ORC/qt/neuralnetwork.xml"), matriceOcr(), nnetwork(matriceOcr.getLayers(), CvANN_MLP::SIGMOID_SYM,0.6,1), isTrained(false){
+:processor(), nnetworkFile("/home/pixies/Desktop/OCR/depot/ORC/createdFile/neuralnetwork.xml"), matriceOcr(), nnetwork(matriceOcr.getLayers(), CvANN_MLP::SIGMOID_SYM,0.6,1), isTrained(false){
   // TODO Load Serialized this->nnetwork file if he exists
 }
 
