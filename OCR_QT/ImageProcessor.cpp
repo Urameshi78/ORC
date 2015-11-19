@@ -38,7 +38,7 @@ int     ImageProcessor::processSet(std::string const &baseDir, QString outputFil
 
 int     ImageProcessor::processSample(std::string const &baseDir, SetWriter & writer,  QTextStream &stream){
   int count = 0;
-  for (int value = 65; value <= 126; ++value){
+  for (int value = 32; value <= 126; ++value){
     ++count;
     //    std::cout << static_cast<char>(value) << std::endl;
     cv::Mat img = cv::imread(baseDir + "/" + std::to_string(value) + ".bmp", 0);
