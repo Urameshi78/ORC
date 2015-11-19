@@ -2,6 +2,8 @@
 #include <QFileDialog>
 #include <iostream>
 
+std::string path;
+
 void onClickEventHandler(int event, int, int, int, void *window)
 {
     Window *win = (Window*)window;
@@ -27,7 +29,7 @@ void Window::Display(int x, int y)
 
 void Window::LoadImage()
 {
-    std::string path = QFileDialog::getOpenFileName(0,"Open Image", "/home/", "Image Files (*.bmp)").toStdString();
+    path = QFileDialog::getOpenFileName(0,"Open Image", "/home/", "Image Files (*.bmp)").toStdString();
     image = cv::imread(path.c_str());
     if (image.empty() == false) {
         cv::imshow(name, image);

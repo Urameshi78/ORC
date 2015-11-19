@@ -10,6 +10,7 @@ QT       -= gui
 
 TARGET = OCR
 CONFIG   += console
+CONFIG   += c++11
 CONFIG   -= app_bundle
 
 TEMPLATE = app
@@ -36,7 +37,12 @@ SOURCES += main.cpp \
     learnwindow.cpp \
     imagewindow.cpp \
     loadwindow.cpp \
-    quitwindow.cpp
+    quitwindow.cpp \
+    OCR.cpp \
+    ImageProcessor.cpp \
+    MatriceOCR.cpp \
+    SetReader.cpp \
+    SetWriter.cpp
 
 HEADERS += \
         window.h \
@@ -44,4 +50,9 @@ HEADERS += \
     imagewindow.h \
     loadwindow.h \
     loadwindow.h \
-    quitwindow.h
+    quitwindow.h \
+    OCR.hpp \
+    SetWriter.hpp \
+    SetReader.hpp \
+    ImageProcessor.hpp \
+    MatriceOCR.hpp
